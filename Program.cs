@@ -30,6 +30,7 @@ app.MapPut("/{id}", async (int id, Categorias categoria, CategoriaDb db ) => {
 
     categoriaF.Categoria = categoria.Categoria;
     categoriaF.Estatus = categoria.Estatus;
+    categoriaF.FechaActualizacion = new();
     
     db.Categorias.Update(categoriaF);
 
